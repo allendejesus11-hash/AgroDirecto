@@ -5,7 +5,7 @@ services:
       context: ./agrodirecto-main
     container_name: agrodirecto-api
     ports:
-      - "6868:8080"
+      - "8080:8088"
     networks:
       - agrodirecto-network
     depends_on:
@@ -36,5 +36,5 @@ services:
 volumes:
   db_data:
 networks:
-  my-network-name:
-    name: agrodirecto-network
+  agrodirectop-network:
+    driver: bridge
